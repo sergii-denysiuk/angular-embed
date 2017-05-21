@@ -1,0 +1,24 @@
+<div>
+    <div data-ng-repeat="embed in embeds | limitTo:getLimit()"
+         data-ng-include="embed.source.templateUrl">
+    </div>
+
+    <div class="limit-btns"
+         data-ng-if="isCanLimit()">
+        <button id="show-more"
+                class="show-more-btn"
+                type="button"
+                data-ng-show="isLimited()"
+                data-ng-click="clickLimit()">
+            show more
+        </button>
+
+        <button id="show-less"
+                class="show-less-btn"
+                type="button"
+                data-ng-hide="isLimited()"
+                data-ng-click="clickLimit()">
+            show less
+        </button>
+    </div>
+</div>

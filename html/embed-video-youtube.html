@@ -1,0 +1,53 @@
+<div class="embed-video-youtube">
+    <div class="embed-video-youtube-preview">
+        <div class="embed-video-youtube-title">
+            <a data-ng-href="{{ embed.templateScope.url }}"
+               data-ng-bind="embed.templateScope.snippet.localized.title ||
+                             embed.templateScope.snippet.title"></a>
+        </div>
+
+        <div class="embed-video-youtube-description">
+            <span data-ng-bind-html="embed.templateScope.snippet.localized.description ||
+                                     embed.templateScope.snippet.description"></span>
+            <span data-ng-bind="embed.templateScope.snippet.publishedAt"></span>
+        </div>
+
+        <div class="embed-video-youtube-channel">
+            <a data-ng-href="{{ embed.templateScope.channelUrl }}"
+               data-ng-bind="embed.templateScope.snippet.channelTitle"></a>
+        </div>
+
+        <div class="embed-video-youtube-tags">
+            <span data-ng-repeat="tag in embed.templateScope.snippet.tags"
+                  data-ng-bind="tag"></span>
+        </div>
+
+        <div class="embed-video-youtube-statistics">
+            <span data-ng-bind="embed.templateScope.statistics.likeCount"></span>
+            <span data-ng-bind="embed.templateScope.statistics.dislikeCount"></span>
+            <span data-ng-bind="embed.templateScope.statistics.favoriteCount"></span>
+            <span data-ng-bind="embed.templateScope.statistics.viewCount"></span>
+            <span data-ng-bind="embed.templateScope.statistics.commentCount"></span>
+        </div>
+    </div>
+
+    <div class="embed-video-youtube-thumbnail"
+         data-ng-click="playYoutube=!playYoutube"
+         data-ng-show="!playYoutube">
+        <img data-ng-src="{{ embed.templateScope.snippet.thumbnails.default.url }}"
+             width="{{ embed.templateScope.snippet.thumbnails.default.width }}"
+             height="{{ embed.templateScope.snippet.thumbnails.default.height }}"/>
+        <i class="embed-video-youtube-play-icon"></i>
+    </div>
+
+    <div class="embed-video-youtube-player"
+         data-ng-if="playYoutube">
+        <iframe src="{{ embed.templateScope.srcUrl }}"
+                frameborder="no"
+                width="{{ embed.templateScope.dimensions.width }}"
+                height="{{ embed.templateScope.dimensions.height }}"
+                webkitallowfullscreen
+                mozallowfullscreen
+                allowfullscreen></iframe>
+    </div>
+</div>

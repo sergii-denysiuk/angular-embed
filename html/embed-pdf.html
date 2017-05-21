@@ -1,0 +1,27 @@
+<div class="embed-pdf">
+    <div class="embed-pdf-preview"
+         data-ng-hide="showPdf">
+        <div class="embed-pdf-details">
+            <div class="embed-pdf-title">
+                <a href data-ng-bind="embed.templateScope.url"></a>
+            </div>
+
+            <div class="embed-pdf-actions">
+                <a data-ng-href="{{ embed.templateScope.url }}" target="_blank"">Download</a>
+                <button type="button" data-ng-click="showPdf=!showPdf"">View PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="embed-pdf-view"
+         data-ng-if="showPdf">
+        <iframe src="{{ embed.templateScope.srcUrl }}"
+                width="{{ embed.templateScope.dimensions.width }}"
+                height="{{ embed.templateScope.dimensions.height }}"
+                frameborder="no"
+                webkitallowfullscreen
+                mozallowfullscreen
+                allowfullscreen
+        ></iframe>
+    </div>
+</div>

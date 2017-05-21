@@ -1,0 +1,33 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.embed-video-basic {}
+
+.embed-video-iframe {}
+
+.embed-video-youtube {}
+.embed-video-youtube-preview {}
+.embed-video-youtube-title {}
+.embed-video-youtube-description {}
+.embed-video-youtube-channel {}
+.embed-video-youtube-tags {}
+.embed-video-youtube-statistics {}
+.embed-video-youtube-thumbnail {}
+.embed-video-youtube-play-icon {}
+.embed-video-youtube-player {}
+
+.embed-audio-basic {}
+
+.embed-audio-iframe {}
+
+.embed-image {}
+
+.embed-pdf {}
+.embed-pdf-preview {}
+.embed-pdf-details {}
+.embed-pdf-title {}
+.embed-pdf-actions {}
+.embed-pdf-view {}
+
+.embed-code {}

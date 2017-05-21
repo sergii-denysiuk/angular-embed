@@ -1,0 +1,20 @@
+{
+  "name": "angular-embed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/http-server/bin/http-server -a localhost -p 8000 -c-1 -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://sergii-denysiuk@bitbucket.org/sergii-denysiuk/angular-embed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/sergii-denysiuk/angular-embed#readme",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  }
+}

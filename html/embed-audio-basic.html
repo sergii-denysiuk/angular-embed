@@ -1,0 +1,10 @@
+<div class="embed-audio-basic">
+    <audio controls
+           style="width: {{ embed.templateScope.dimensions.width }}px;
+                  height: {{ embed.templateScope.dimensions.height }}px;">
+        <source src="{{ embed.templateScope.srcUrl }}">
+
+        <span>Audio is not supported by your browser.</span>
+        <a href="{{ embed.templateScope.srcUrl }}">Download.</a>
+    </audio>
+</div>
